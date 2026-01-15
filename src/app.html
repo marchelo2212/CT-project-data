@@ -1,0 +1,135 @@
+<div
+  class="flex h-screen w-screen bg-slate-900 text-slate-100 font-sans overflow-hidden"
+>
+  <!-- Sidebar -->
+  <aside
+    class="w-80 flex-shrink-0 border-r border-slate-800 bg-slate-950 p-6 pb-20 flex flex-col gap-6 overflow-y-auto"
+  >
+    <div>
+      <h1
+        class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent"
+      >
+        Explorando el universo del Pensamiento Computacional
+      </h1>
+      <p class="text-sm text-slate-400 mt-2">
+        Una historia visual de su desarrollo científico e impacto en el mundo
+      </p>
+    </div>
+
+    <!-- Stats -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+      <div class="bg-slate-900 p-3 rounded-lg border border-slate-800">
+        <div class="text-xs text-slate-500 uppercase">Fuentes Analizadas</div>
+        <div class="text-2xl font-semibold" id="stat-sources">-</div>
+      </div>
+      <div class="bg-slate-900 p-3 rounded-lg border border-slate-800">
+        <div class="text-xs text-slate-500 uppercase">Items Procesados</div>
+        <div class="text-2xl font-semibold" id="stat-items">-</div>
+      </div>
+      <div class="bg-slate-900 p-3 rounded-lg border border-slate-800">
+        <div class="text-xs text-slate-500 uppercase">Investigadores</div>
+        <div class="text-2xl font-semibold" id="stat-researchers">-</div>
+      </div>
+      <div class="bg-slate-900 p-3 rounded-lg border border-slate-800">
+        <div class="text-xs text-slate-500 uppercase">Patentes</div>
+        <div class="text-2xl font-semibold opacity-70" id="stat-patents">-</div>
+      </div>
+      <div class="bg-slate-900 p-3 rounded-lg border border-slate-800">
+        <div class="text-xs text-slate-500 uppercase">Políticas Públicas</div>
+        <div class="text-2xl font-semibold opacity-70" id="stat-policy">-</div>
+      </div>
+      <div class="bg-slate-900 p-3 rounded-lg border border-slate-800">
+        <div class="text-xs text-slate-500 uppercase">Citas Totales</div>
+        <div class="text-2xl font-semibold text-blue-400" id="stat-citations">-</div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="flex-1 space-y-2">
+      <!-- View 0: Home -->
+      <button
+        class="nav-btn active group w-full text-left px-4 py-3 rounded-lg bg-blue-500/10 text-blue-400 border border-blue-500/20 transition-all hover:bg-blue-500/20"
+        data-view="home"
+      >
+        <div class="font-medium">Inicio</div>
+        <div class="text-xs text-blue-300/60 mt-0.5">Presentación del Proyecto</div>
+      </button>
+
+      <!-- View 1: Evolution -->
+      <button
+        class="nav-btn group w-full text-left px-4 py-3 rounded-lg text-slate-400 hover:bg-white/5 transition-all hover:text-blue-300 border border-transparent hover:border-white/10"
+        data-view="evolution"
+      >
+        <div class="font-medium">Panorama temporal</div>
+        <div class="text-xs text-blue-300/60 mt-0.5">CT a lo largo del tiempo</div>
+      </button>
+
+      <!-- View 2: Impact Analysis -->
+      <button
+        class="nav-btn group w-full text-left px-4 py-3 rounded-lg text-slate-400 hover:bg-white/5 transition-all hover:text-blue-300 border border-transparent hover:border-white/10"
+        data-view="impact"
+      >
+        <div class="font-medium">Impacto académico vs social</div>
+        <div class="text-xs text-slate-500 group-[.active]:text-blue-300/60 mt-0.5">Influencia científica ≠ visibilidad social</div>
+      </button>
+
+      <!-- View 4: Conceptual Definition -->
+      <button
+        class="nav-btn group w-full text-left px-4 py-3 rounded-lg text-slate-400 hover:bg-slate-900 hover:text-slate-200 transition-all"
+        data-view="concepts"
+      >
+        <div class="font-medium">Definición conceptual de CT</div>
+        <div class="text-xs text-slate-500 mt-0.5 group-hover:text-slate-400">
+          ¿Qué es realmente el Pensamiento Computacional?
+        </div>
+      </button>
+
+       <!-- View 5: Network -->
+       <button
+       class="nav-btn group w-full text-left px-4 py-3 rounded-lg text-slate-400 hover:bg-slate-900 hover:text-slate-200 transition-all"
+       data-view="network"
+     >
+       <div class="font-medium">Redes de conocimiento</div>
+       <div class="text-xs text-slate-500 mt-0.5 group-hover:text-slate-400">
+         Cómo se construye el conocimiento en CT
+       </div>
+     </button>
+
+      <!-- View 5: Geography -->
+      <button
+      class="nav-btn group w-full text-left px-4 py-3 rounded-lg text-slate-400 hover:bg-slate-900 hover:text-slate-200 transition-all"
+      data-view="geography"
+    >
+      <div class="font-medium">Geografía del CT</div>
+      <div class="text-xs text-slate-500 mt-0.5 group-hover:text-slate-400">
+        Dónde se investiga CT y con qué intensidad
+      </div>
+    </button>
+    </nav>
+
+    <!-- Footer -->
+    <div class="text-xs text-slate-600 pt-4 border-t border-slate-800">
+      <p>Data: OpenAlex & Scopus</p>
+      <p class="mt-1">© 2025 Marcelo Sotaminga</p>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="flex-1 relative overflow-auto bg-slate-900">
+    <div
+      class="absolute inset-0 bg-[url('/grid.svg')] opacity-5 pointer-events-none"
+    ></div>
+
+    <div class="p-8 max-w-7xl mx-auto space-y-8 relative z-10" id="main-view">
+      <!-- Content injected by JS -->
+      <div
+        class="animate-pulse flex flex-col items-center justify-center h-full text-slate-500"
+      >
+        <div
+          class="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full animate-spin mb-4"
+        ></div>
+        <p>Loading dataset...</p>
+      </div>
+    </div>
+  </main>
+</div>
