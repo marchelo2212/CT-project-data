@@ -1,0 +1,21 @@
+skill_group,skill_name,term,confidence,notes,match_type,base_weight
+ct_core_skills,Abstraction,abstraction,0.86,Abstraction is a canonical CT component explicitly named in the candidate terms.,evidence_term,1.0
+ct_core_skills,Algorithmic thinking,algorithmic thinking,0.9,Algorithmic thinking is a CT-defining practice focused on formulating stepwise procedures.,evidence_term,1.0
+ct_core_skills,Algorithmic thinking,algorithmic,0.9,Algorithmic thinking is a CT-defining practice focused on formulating stepwise procedures.,evidence_term,1.0
+ct_core_skills,Debugging,debugging,0.88,Debugging is a core CT/programming practice commonly treated as part of CT skill sets.,evidence_term,1.0
+ct_core_skills,Programming / Coding,programming,0.78,Programming/coding practices are frequently used as operationalizations of CT in education and are explicitly present in the terms.,evidence_term,1.0
+ct_core_skills,Programming / Coding,coding,0.78,Programming/coding practices are frequently used as operationalizations of CT in education and are explicitly present in the terms.,evidence_term,1.0
+ct_core_skills,Programming / Coding,computer programming,0.78,Programming/coding practices are frequently used as operationalizations of CT in education and are explicitly present in the terms.,evidence_term,1.0
+ct_core_skills,Programming / Coding,based programming,0.78,Programming/coding practices are frequently used as operationalizations of CT in education and are explicitly present in the terms.,evidence_term,1.0
+ct_core_skills,Programming / Coding,visual programming,0.78,Programming/coding practices are frequently used as operationalizations of CT in education and are explicitly present in the terms.,evidence_term,1.0
+ct_core_skills,Programming / Coding,block based,0.78,Programming/coding practices are frequently used as operationalizations of CT in education and are explicitly present in the terms.,evidence_term,1.0
+transversal_skills,Problem solving (general),problem solving,0.92,Problem solving is broadly educational and not CT-specific unless explicitly computational/algorithmic.,evidence_term,0.25
+transversal_skills,Problem solving (general),solving,0.92,Problem solving is broadly educational and not CT-specific unless explicitly computational/algorithmic.,evidence_term,0.25
+transversal_skills,Problem solving (general),problem,0.92,Problem solving is broadly educational and not CT-specific unless explicitly computational/algorithmic.,evidence_term,0.25
+transversal_skills,Motivation,motivation,0.9,"Motivation is a general learner factor, not a CT-defining skill.",evidence_term,0.25
+transversal_skills,Engagement,engagement,0.88,Engagement is a general learning construct rather than a CT component.,evidence_term,0.25
+transversal_skills,Self-efficacy,self efficacy,0.9,"Self-efficacy is a general psychological/educational construct, not CT-specific.",evidence_term,0.25
+transversal_skills,Self-efficacy,efficacy,0.9,"Self-efficacy is a general psychological/educational construct, not CT-specific.",evidence_term,0.25
+transversal_skills,Attitudes,attitudes,0.86,Attitudes are general affective outcomes and not CT-defining skills.,evidence_term,0.25
+transversal_skills,Literacy (general),literacy,0.74,Literacy is ambiguous and not explicitly framed as computational/digital literacy here.,evidence_term,0.25
+transversal_skills,Thinking skills (generic),thinking skills,0.84,Generic 'thinking skills' are not uniquely tied to CT without explicit computational framing.,evidence_term,0.25

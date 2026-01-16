@@ -15,7 +15,7 @@ import masterDataUrl from './df_master_base.csv?url'
 import timeSeriesUrl from './viz_time_series_all.csv?url'
 import impactScatterUrl from './viz_impact_scatter_all.csv?url'
 import rankUrl from './viz_impact_rank_impact.csv?url'
-import dimensionsUrl from './Data_sets/dimensions_data.jsonl?url'
+
 import patentsUrl from './Data_sets/patents_ct_clean.csv?url' 
 import policyUrl from './Data_sets/policy_ct_clean.csv?url'
 import streamUrl from './Data_sets/viz_ct_skills_stream.csv?url'
@@ -119,7 +119,7 @@ async function init() {
         Promise.resolve([]), // streamUrl faltante/omitido
         d3.csv(masterDataUrl, d3.autoType),
         d3.csv(rankUrl, d3.autoType), // Cargar Datos de Clasificación
-        d3.text(dimensionsUrl).catch(() => ''),
+        Promise.resolve(''), // dimensionsUrl removed
         d3.csv(patentsUrl, d3.autoType).catch(() => []), 
         d3.csv(policyUrl, d3.autoType).catch(() => []),
         d3.csv(streamUrl, d3.autoType).catch(() => []), // Nuevos Datos de Stream
@@ -158,16 +158,7 @@ async function init() {
         }
     })
     
-    // Analizar JSONL para dimensiones
-    if (dimText) {
-        vizData.dimensionsData = dimText.trim().split('\n')
-            .map(line => {
-                try { return JSON.parse(line) } catch(e) { return null }
-            })
-            .filter(d => d)
-    } else {
-        vizData.dimensionsData = []
-    }
+
 
     // Datos de Patentes (CSV cargado directamente)
     vizData.patentsData = patents || []

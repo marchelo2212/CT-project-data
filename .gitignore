@@ -32,3 +32,20 @@ src/df_master_enriched_ctv2.csv
 *.jsonl
 *.csv
 *.json
+
+# Whitelist viz files
+!src/viz_*.csv
+!src/Data_sets/*.csv
+!src/skill_dictionary_v3_weighted.csv
+!src/df_master_base.csv
+!src/viz_time_series_all.csv
+!src/viz_impact_scatter_all.csv
+!src/viz_impact_rank_impact.csv
+
+# Keep heavy files ignored
+src/Data_sets/dimensions_data.jsonl
+src/df_master_enriched_ctv2.csv
+
+# Public data
+!public/data/*.csv
+!public/data/*.json

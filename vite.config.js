@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: './', // Usar rutas relativas para un despliegue flexible (ej. subcomité de GitHub Pages)
+  base: '/CT-project-data/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
