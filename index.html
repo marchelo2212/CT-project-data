@@ -9,6 +9,18 @@
   </head>
   <body class="bg-brand-dark text-slate-100">
     <div id="app"></div>
+    <script>
+      window.addEventListener('error', function(event) {
+        var app = document.getElementById('app');
+        if (app) {
+          app.innerHTML = '<div style="color: #ffcccc; background: #330000; padding: 20px; font-family: monospace;">' +
+            '<h2 style="color: #ff5555;">Critical Error</h2>' +
+            '<p>' + event.message + '</p>' +
+            '<p style="color: #888;">' + (event.filename || 'unknown script') + ':' + (event.lineno || 0) + '</p>' +
+            '</div>';
+        }
+      });
+    </script>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

@@ -174,10 +174,13 @@ async function init() {
 
   } catch (err) {
     console.error(err)
-    if (document.querySelector('#main-view')) {
-      document.querySelector('#main-view').innerHTML = `
-        <div class="p-4 bg-red-900/20 border border-red-500/50 rounded text-red-200">
-          Error loading data: ${err.message}
+    const targetEl = document.querySelector('#main-view') || document.querySelector('#app')
+    if (targetEl) {
+      targetEl.innerHTML = `
+        <div class="p-4 bg-red-900/20 border border-red-500/50 rounded text-red-200 m-4">
+          <h3 class="font-bold text-lg mb-2">Initialization Error</h3>
+          <p>${err.message}</p>
+          <pre class="text-xs mt-2 opacity-75">${err.stack}</pre>
         </div>
       `
     }
