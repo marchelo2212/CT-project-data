@@ -22,6 +22,9 @@ import streamUrl from './Data_sets/viz_ct_skills_stream.csv?url'
 import heatmapUrl from './Data_sets/viz_ct_skills_heatmap.csv?url'
 import skillDictUrl from './skill_dictionary_v3_weighted.csv?url'
 
+const loading = document.getElementById('loading');
+if (loading) loading.remove();
+
 document.querySelector('#app').innerHTML = layoutHtml
 
 // Estado
