@@ -23,6 +23,22 @@
             '</div>';
         }
       });
+      // DIAGNOSTIC PROBE
+      fetch('./assets/index.js')
+        .then(response => {
+           console.log('Probe status:', response.status);
+           const loading = document.getElementById('loading');
+           if (loading) {
+             loading.innerHTML += '<br><span style="font-size: 0.8em; color: #64748b;">Bundle Status: ' + response.status + ' (' + response.statusText + ')</span>';
+             if (response.status === 404) {
+                 loading.innerHTML += '<br><span style="color: #ef4444; font-weight: bold;">CRITICAL: Main script file is missing on server.</span>';
+             }
+           }
+        })
+        .catch(err => {
+           const loading = document.getElementById('loading');
+           if (loading) loading.innerHTML += '<br><span style="color: #ef4444;">Probe Failed: ' + err.message + '</span>';
+        });
     </script>
     <script type="module" src="/src/main.js"></script>
   </body>

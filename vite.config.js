@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/CT-project-data/', // Correct base path for project pages
+  base: './', // Use relative paths for maximum compatibility
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
