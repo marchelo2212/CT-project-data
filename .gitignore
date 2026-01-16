@@ -49,3 +49,12 @@ src/df_master_enriched_ctv2.csv
 # Public data
 !public/data/*.csv
 !public/data/*.json
+
+# Whitelist config files
+!package.json
+!package-lock.json
+!vite.config.js
+!tailwind.config.js
+!postcss.config.js
+!tsconfig.json
+!jsconfig.json
