@@ -18,6 +18,8 @@ jobs:
           ls -R
       - run: npm install
       - run: npm run build
+      - name: Create .nojekyll file
+        run: touch dist/.nojekyll
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
