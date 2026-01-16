@@ -322,7 +322,15 @@ function renderGeography() {
           }
      }).catch(e => {
          console.error(e)
-         container.innerHTML = 'Error initializing Geography View'
+         container.innerHTML = `
+            <div class="flex flex-col items-center justify-center h-full text-red-400 p-4">
+                <div class="font-bold mb-2">Error initializing Geography View</div>
+                <div class="text-sm bg-slate-900 p-2 rounded border border-red-900/50">
+                    ${e.message}<br>
+                    <span class="text-xs text-slate-500">Path: ${import.meta.env.BASE_URL}data/world-110m.json</span>
+                </div>
+            </div>
+        `
      })
 }
 
@@ -403,8 +411,17 @@ function renderNetwork() {
             })
         }
     }).catch(err => {
+        console.error(err)
         const el = document.getElementById('viz-network')
-        if(el) el.innerHTML = `<div class="flex items-center justify-center h-full text-red-400">Error loading network ${suffix}</div>`
+        if(el) el.innerHTML = `
+            <div class="flex flex-col items-center justify-center h-full text-red-400 p-4">
+                <div class="font-bold mb-2">Error loading network ${suffix}</div>
+                <div class="text-sm bg-slate-900 p-2 rounded border border-red-900/50">
+                    ${err.message}<br>
+                    <span class="text-xs text-slate-500">Path: ${import.meta.env.BASE_URL}data/net_nodes_${suffix}.csv</span>
+                </div>
+            </div>
+        `
     })
 }
 

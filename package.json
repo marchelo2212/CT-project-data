@@ -1,6 +1,7 @@
 {
   "name": "viz-app",
   "private": true,
+  "description": "Computational Thinking Visualization Project",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
