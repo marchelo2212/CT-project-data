@@ -12,6 +12,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 18
+      - name: Debug file structure
+        run: |
+          ls -la
+          ls -R
       - run: npm install
       - run: npm run build
       - name: Upload artifact
