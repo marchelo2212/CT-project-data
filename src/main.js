@@ -1,6 +1,7 @@
 import './style.css'
 
 import * as d3 from 'd3'
+console.log('>>> MAIN.JS LOADED <<<'); // Debug beacon
 import layoutHtml from './app.html?raw'
 import { TimelineChart } from './viz/TimelineChart.js'
 import { TemporalPanorama } from './viz/TemporalPanorama.js'
